@@ -1,6 +1,11 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @user %>
+<p>
+  <%= @user.name %>
+</p>
+
+<%= render @user.posts %>
+<%= render partial: 'posts/form', locals: { user: @user } %>
 
 <div>
   <%= link_to "Edit this user", edit_user_path(@user) %> |
