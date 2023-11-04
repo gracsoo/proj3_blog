@@ -39,15 +39,12 @@ class PostsController < ApplicationController
     @user = User.find_by_id(params[:user_id])
     @post = @user.posts.new(content: params[:content], user_id: params[:user_id])
 
-
     if !@post.save
         flash[:notice] = @post.errors.full_messages.to_sentence
     end
 
     redirect_to user_path(params[:user_id])
   end
-
-
 
   # PATCH/PUT /posts/1 or /posts/1.json
   def update

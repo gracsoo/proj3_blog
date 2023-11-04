@@ -1,8 +1,8 @@
 <p style="color: green"><%= notice %></p>
 
-<p>
-  <%= @user.name %>
-</p>
+<h1>
+  <%= @user.name %>'s Posts
+</h1>
 
 <%= render @user.posts %>
 <%= render partial: 'posts/form', locals: { user: @user } %>
