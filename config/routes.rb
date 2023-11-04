@@ -5,7 +5,10 @@ Rails.application.routes.draw do
   end
   # resources :users
 
-  resources :posts
+  resources :posts do
+    resources :comments, only: [:create]
+  end
+  # resources :comments
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

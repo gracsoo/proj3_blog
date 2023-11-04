@@ -2,8 +2,17 @@
   <p>
     <strong>Post:</strong>
     <%= post.content %>
+    <small> | by <%= post.user.name %></small>
   </p>
-  <small>by <%= post.user.name %></small>
-  
+
+  <p>
+    <strong>Comments:</strong>
+    <div id="comments">
+      <% post.comments.each do |comment| %>
+        <%= render comment %>
+      <% end %>
+    </div>
+  </p>
+
 </div>
 <hr />

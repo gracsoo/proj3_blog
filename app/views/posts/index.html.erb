@@ -5,5 +5,6 @@
 <div id="posts">
   <% @posts.each do |post| %>
     <%= render post %>
+    <%= render post.comments %>
   <% end %>
 </div>
