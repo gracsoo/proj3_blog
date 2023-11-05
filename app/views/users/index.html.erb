@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Users</h1>
+
+<div id="users">
+  <% @users.each do |user| %>
+    <%= render user %>
+    <p>
+      <%= link_to "View Posts", user %>
+    </p>
+    <hr />
+  <% end %>
+</div>
+
+<%= link_to "Create New User", new_user_url, class: "btn btn-lg btn-primary" %>

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>All Posts</h1>
+
+<div id="posts">
+  <% @posts.each do |post| %>
+    <%= link_to "View Post", post %>
+    <%= render post %>
+  <% end %>
+</div>

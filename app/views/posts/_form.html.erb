@@ -1,0 +1,4 @@
+<%= form_with(url: user_posts_path(user)) do |form| %>
+  <%= form.text_area :content, size: "60x10" %>
+  <%= form.submit "Submit" %>
+<% end %>

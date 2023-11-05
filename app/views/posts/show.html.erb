@@ -1,0 +1,8 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @post %>
+
+<div>
+  <% @user = User.find_by_id(@post.user_id) %>
+  <%= link_to "Back to All Posts", @user %>
+</div>
