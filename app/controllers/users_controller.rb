@@ -49,6 +49,12 @@ class UsersController < ApplicationController
 
   # DELETE /users/1 or /users/1.json
   def destroy
+    # @user.comments do |comment|
+    #   comment.destroy!
+    # end
+    # @user.posts do |post|
+    #   post.destroy!
+    # end
     @user.destroy!
 
     respond_to do |format|

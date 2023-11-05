@@ -4,7 +4,7 @@
 
 <div id="posts">
   <% @posts.each do |post| %>
+    <%= link_to "View Post", post %>
     <%= render post %>
-    <%= render post.comments %>
   <% end %>
 </div>

@@ -14,5 +14,11 @@
     </div>
   </p>
 
+  
+  <% if !current_page?(user_url) %>
+    <%= render partial: 'comments/form', locals: { post: @post } %>
+  <% else %>
+    <%= link_to "View Post", post %>
+  <% end %>
 </div>
 <hr />
