@@ -55,6 +55,14 @@ body {
     text-shadow: 2px 2px rgb(246, 173, 210);
 }
 
+.general-heading1 {
+  align-items: center;
+  font-size: 30px;
+  margin-bottom: 2rem;
+  color: #fff;
+  text-shadow: 2px 2px rgb(246, 173, 210);
+}
+
 .text-area {
     border: 2px solid rgb(202, 216, 242); 
     border-radius: 30px;
@@ -84,6 +92,18 @@ body {
     border: 1px solid rgb(255, 255, 255);
     color: #fff;
     font-size: 18px;
+}
+
+.button_to {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  /*optional*/
+  font-family: arial, sans-serif;
+  /*input has OS specific font-family*/
+  color: #069;
+  cursor: pointer;
+  display: inline;
 }
 
 .post-card {
