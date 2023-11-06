@@ -1,6 +1,6 @@
 <div id="<%= dom_id comment %>">
-  <p>
+  <span>
+    <Strong><%= comment.user.name %>: </Strong>
     <%= comment.content %>
-    <small>by <%= comment.user.name %></small>
-  </p>
+  </span>
 </div>

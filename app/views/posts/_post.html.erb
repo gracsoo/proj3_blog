@@ -1,24 +1,25 @@
-<div id="<%= dom_id post %>">
-  <p>
-    <strong>Post:</strong>
-    <%= post.content %>
-    <small> | by <%= post.user.name %></small>
-  </p>
+<div id="<%= dom_id post %>", class = "post-card">
+  <div class="card-header">
+    <span class="user-avatar">👾</span>
+    <span class="user-name"><%= post.user.name %></span>
+  </div>
 
-  <p>
-    <strong>Comments:</strong>
+  <div class="card-body">
+    <p class="post-content"><%= post.content %></p>
+  </div>
+
+  <div class="comment-list">
+    <strong>Comments</strong>
     <div id="comments">
       <% post.comments.each do |comment| %>
         <%= render comment %>
       <% end %>
     </div>
-  </p>
-
-  
+  </div>
+ 
   <% if !current_page?(user_url) %>
     <%= render partial: 'comments/form', locals: { post: @post } %>
   <% else %>
     <%= link_to "View Post", post %>
   <% end %>
 </div>
-<hr />

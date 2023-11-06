@@ -12,16 +12,16 @@
   <% end %>
 
   <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= form.label :name, class: 'label-color', style: "display: block" %>
+    <%= form.text_field :name, class: 'input-block' %>
   </div>
 
   <div>
-    <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
+    <%= form.label :email, class: 'label-color', style: "display: block" %>
+    <%= form.text_field :email, class: 'input-block' %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit class: 'submit-button' %>
   </div>
 <% end %>
