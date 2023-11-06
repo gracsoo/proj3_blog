@@ -1,4 +1,6 @@
 <%= form_with(url: post_comments_path(post)) do |form| %>
-    <%= form.text_area :content, size: "20x1" %>
-    <%= form.submit "Submit" %>
-  <% end %>
+    <%= form.text_area :content, size: "45x1", class: "text-area1" %>
+    <div class = "submit-post-div">
+      <%= form.submit "Submit", class: "submit-post-btn" %>
+    </div>
+    <% end %>

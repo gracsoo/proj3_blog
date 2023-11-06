@@ -1,15 +1,21 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Users</h1>
+<h1 class="general-heading">All Users🦄</h1>
 
 <div id="users">
   <% @users.each do |user| %>
-    <%= render user %>
-    <p>
-      <%= link_to "View Posts", user %>
-    </p>
-    <hr />
+    <div class="user-card">
+      <div class = "user-content">
+        <div class="user-emoji">👾</div>
+        <%= render user %>
+      </div>
+      <div class="view-posts-link">
+        <%= link_to "View Posts", user %>
+      </div>
+    </div>
   <% end %>
 </div>
 
-<%= link_to "Create New User", new_user_url, class: "btn btn-lg btn-primary" %>
+<div class = "create-btn">
+  <%= link_to "Create New User", new_user_url, class: "create-user-btn" %>
+</div>
